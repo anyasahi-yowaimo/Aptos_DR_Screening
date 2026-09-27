@@ -1,0 +1,35 @@
+TA inference: 100%
+ 550/550 [00:46<00:00, 10.17it/s]
+============================================================
+FINAL HELD-OUT TEST RESULTS (n = 550 )
+============================================================
+Accuracy:              0.7473
+Quadratic Weighted Kappa: 0.8823
+Macro F1:               0.5646
+
+
+Per-class sensitivity / specificity:
+  0-No DR              sensitivity=0.926  specificity=0.978  (n=271)
+  1-Mild               sensitivity=0.536  specificity=0.919  (n=56)
+  2-Moderate           sensitivity=0.673  specificity=0.915  (n=150)
+  3-Severe             sensitivity=0.724  specificity=0.893  (n=29)
+  4-Proliferative      sensitivity=0.182  specificity=0.994  (n=44)
+
+Full classification report:
+                 precision    recall  f1-score   support
+
+        0-No DR      0.977     0.926     0.951       271
+         1-Mild      0.429     0.536     0.476        56
+     2-Moderate      0.748     0.673     0.709       150
+       3-Severe      0.273     0.724     0.396        29
+4-Proliferative      0.727     0.182     0.291        44
+
+       accuracy                          0.747       550
+      macro avg      0.631     0.608     0.565       550
+   weighted avg      0.801     0.747     0.754       550
+
+
+NOTE: this evaluation reflects APTOS 2019 only. It does not establish cross-dataset
+generalization (different camera/population) or clinical validity. Classes 3/4 have
+few test examples, so their sensitivity/specificity figures carry wide uncertainty —
+report them as measured, not smoothed over.
